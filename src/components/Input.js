@@ -9,7 +9,7 @@ const Input = ({ type, id, name, value, onChange, required }) => {
       value={value}
       onChange={onChange}
       required={required}
-      className="w-full p-2 border rounded"
+      className="input"
     />
   );
 };

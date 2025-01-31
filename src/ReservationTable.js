@@ -45,39 +45,39 @@ const ReservationForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Card className="w-full max-w-md p-6">
+    <div className="container">
+      <Card>
         <CardHeader>
           <CardTitle>Restaurant Reservation</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} aria-labelledby="reservation-form">
-            <div className="mb-4">
+            <div className="labelInput">
               <Label htmlFor="name">Name</Label>
               <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              {errors.name && <p>{errors.name}</p>}
             </div>
-            <div className="mb-4">
+            <div className="labelInput">
               <Label htmlFor="email">Email</Label>
               <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              {errors.email && <p>{errors.email}</p>}
             </div>
-            <div className="mb-4">
+            <div className="labelInput">
               <Label htmlFor="date">Date</Label>
               <Input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required />
-              {errors.date && <p className="text-red-500 text-sm">{errors.date}</p>}
+              {errors.date && <p>{errors.date}</p>}
             </div>
-            <div className="mb-4">
+            <div className="labelInput">
               <Label htmlFor="time">Time</Label>
               <Input type="time" id="time" name="time" value={formData.time} onChange={handleChange} required />
-              {errors.time && <p className="text-red-500 text-sm">{errors.time}</p>}
+              {errors.time && <p>{errors.time}</p>}
             </div>
-            <div className="mb-4">
+            <div className="labelInput">
               <Label htmlFor="guests">Number of Guests</Label>
               <Input type="number" id="guests" name="guests" value={formData.guests} onChange={handleChange} required />
-              {errors.guests && <p className="text-red-500 text-sm">{errors.guests}</p>}
+              {errors.guests && <p>{errors.guests}</p>}
             </div>
-            <Button type="submit" className="w-full">Book Table</Button>
+            <Button type="submit">Book Table</Button>
           </form>
         </CardContent>
       </Card>
